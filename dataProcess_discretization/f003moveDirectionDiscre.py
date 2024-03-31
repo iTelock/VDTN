@@ -1,8 +1,3 @@
-# 接下来帮我写一个python程序f003moveDirectionDiscre.py，要求：
-# 1，使用f002timeSlotDiscre.py运行后返回的数据bus_data
-# 2，为bus_data新创建一列，名为moveDirection
-# 3，每一个busID对应一辆车，需要计算出车的运动方向，计算方法是根据某条数据的经纬度以及该车下一时刻（参考time）的经纬度计算出运动的方向，方向以正北开始每45度划分为一个方向，一共存在8种方向，对应1,2,3,...,8的数值，计算出方向的数值后存入moveDirection中。如果需要的计算数据不足，则将方向的数值设为0
-
 import pandas as pd
 import math
 
