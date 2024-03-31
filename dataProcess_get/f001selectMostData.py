@@ -1,22 +1,3 @@
-# 功能：从指定的文件（数据集）中提取出现次数最多的公交车数据（根据busID出现次数，且pathID不同），并将最多的这些数据保存为txt文件
-
-# 数据集变量说明：
-# date：数据收集日期，10-01-2014
-# time：数据收集的时刻，06:59:59
-# busID：公交车ID，C825540
-# pathID：公交车线路
-# longitude：经度
-# latitude：维度
-# velocity：速度
-# 请帮我写一个python程序f001selectMostData.py,要求如下：
-# 1、单独定义以下变量：定义变量file_path用于存放文件路径，默认为'/Users/mr.tao/mycode/VDTN/test/2014-10-01.txt'；定义变量bus_num用于指定筛选车辆的数目，默认为5；定义变量save_path用于指定保存文件的路径和文件名，默认为'/Users/mr.tao/mycode/VDTN/dataProcess_get/theMostData.txt'
-# 2、利用pandas从file_path中读取txt文件数据，其中每一行有七个数据，分别用逗号分隔开，每行的七个数据分别代表日期(字符串类型)、时间(字符串类型)、公交车ID(字符串类型)、公交线路(字符串类型)、经度(浮点型)、纬度(浮点型)和速度(浮点型)。定义列名请使用column_names = ["date", "time", "busID", "pathID", "longitude", "latitude", "velocity"]
-# 3、根据time列的时间信息，筛选出7:00:00-19:00:00的数据
-# 4、在不同busID对应不同pathID的基础上，找到数据最多的前bus_num个busID的数据
-# 5、将数据按照原始数据集的格式存入到save_path中
-
-# 20230924:现在我希望修改规则，选择出现次数最多的8个pathID的数据，然后对于其中的每个pathID，再选出12个出现次数最多的busID的数据，如果数据不够则忽略
-
 import pandas as pd
 
 # 定义变量
