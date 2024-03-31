@@ -1,5 +1,3 @@
-
-
 import pandas as pd
 
 def process_data(bus_data):
