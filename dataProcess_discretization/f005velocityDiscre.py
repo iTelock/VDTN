@@ -1,8 +1,3 @@
-# 接下来帮我写一个python程序f005velocityDiscre.py，要求如下：
-# 1，使用f004contactIntervalDiscre.py运行后返回的数据bus_data
-# 2，为bus_data新创建一列，名为velocityLevel
-# 3，根据数据中的velocity，计算出其对应的速度等级并存入其velocityLevel，计算规则是[0,24)视为1,[24,48)视为2,以此类推，velocity大于120时视为120处理。
-
 import pandas as pd
 
 def process_velocity(bus_data):
