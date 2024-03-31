@@ -1,13 +1,3 @@
-# 请帮我写一个python程序dataprocess_discretization.py。利用pandas从theMostData.txt中读取数据，其中每一行有七个数据，分别用逗号分隔开，每行的七个数据分别代表日期(字符串类型)、时间(字符串类型)、公交车ID(字符串类型)、公交线路(字符串类型)、经度(浮点型)、纬度(浮点型)和速度(浮点型)。定义列名请使用column_names = ["date", "time", "busID", "pathID", "longitude", "latitude", "velocity"]。读取之后返回一个名为bus_data的list变量
-
-# 再帮我写一个python程序f001regionCodeDiscre.py。利用刚才得到的bus_data数据实现以下功能：
-# 1，删除date一列数据，新建一列，名为regionCode
-# 2，根据经纬度将bus_data所涉及到的区域划分为5x7=35个矩形，这35个区域分为对应一个区域码（从左到右、从上到下依次对应1,2,3,...,35），再根据bus_data中每条数据的经纬度信息计算其对应的区域码，并存入其regionCode中
-
-# 请改进f001regionCodeDiscre.py的代码。全部要求如下：
-# 1，删除date一列数据，新建一列，名为regionCode
-# 2, 根据所有数据的经纬度计算出一个中心坐标centerPoint
-# 3, 以centerPoint为中心坐标，确定一个35公里×25公里的区域，并将此区域均分为5x7=35个矩形区域，这35个区域分为对应一个区域码（从左到右、从上到下依次对应1,2,3,...,35），再根据bus_data中每条数据的经纬度信息计算其对应的区域码，并存入其regionCode中；如果数据中的经纬度坐标不在这35个区域之中，则删除这条数据。
 
 
 import pandas as pd
