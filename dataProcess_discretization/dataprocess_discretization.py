@@ -1,23 +1,3 @@
-# 功能：
-
-# 目标数据
-# 区域码regionCode
-    # 思路：根据经纬度的范围将数据集的区域分为5*7=35个矩形区域
-    # 根据每个数据的经纬度确定所属的矩形区域，得到区域码
-# 时隙/时段timeSlot
-    # 思路：颗粒度设置为15min，7am-7pm将会划分为48个时间段
-# 运动方向moveDirection
-    # 以pi/4（45°）为单位，运动方向分为8个（1,2,3,4,5,6,7,8）
-    # 如果计算不出来，设置为0
-# 平均接触时间间隔contactInterval
-    # 最大为3000s，颗粒度为300s，一共为10个间隔（越小说明投递能力越好）
-# 速度velocity
-    # 最大为120km/h，颗粒度为24km/h,分为5段
-# 路线编号pathID
-# 投递等级deliveryLevel（7个，将在下一阶段动态得到）
-
-# 备注：在读取theMostData.txt之前，要确保这个数据已经筛选出来，此功能在f001selectMostData.py中实现
-
 import pandas as pd
 from f001regionCodeDiscre import process_data
 from f002timeSlotDiscre import assign_time_slot
